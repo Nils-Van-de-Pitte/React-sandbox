@@ -1,10 +1,13 @@
-import Button from "./components/Button.jsx";
+import Student from "./logic/Student.jsx";
 
 
 function App() {
     return(
         <>
-            <Button/>
+            <Student name='Steve' age={30} isStudent={true}/>
+            <Student name='Bob' age={39} isStudent={false}/>
+            <Student/>
+
         </>
     );
 }
