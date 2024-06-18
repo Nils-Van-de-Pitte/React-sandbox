@@ -1,9 +1,9 @@
-import UserGreeting from "./logic/UserGreeting.jsx";
+import List from "./logic/List.jsx";
 
 function App() {
     return(
         <>
-            <UserGreeting name='Bob' isLoggedIn={true} />
+            <List/>
         </>
     );
 }
