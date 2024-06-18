@@ -1,0 +1,11 @@
+.logged-in{
+    text-align: center;
+    margin-right: 2em;
+    font-size: 1.3em;
+    background-color: red;
+}
+
+.logged-out{
+    text-align: center;
+    font-size: 1.3em;
+}
