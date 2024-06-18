@@ -1,0 +1,19 @@
+.category{
+    width: 20%;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.items{
+    width: 20%;
+    margin-top: 1em;
+}
+
+.items li{
+    list-style: none;
+}
+
+.items:hover{
+    border: 1px solid black;
+}
