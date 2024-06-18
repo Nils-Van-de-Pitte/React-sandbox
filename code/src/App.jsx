@@ -1,24 +1,9 @@
-import List from "./logic/List.jsx";
+import Button from "./components/Button.jsx";
 
 function App() {
-
-    const fruits = [
-        {id: 1, name: 'Apple', calories: 95},
-        {id: 2, name: 'Orange', calories: 45}
-    ]
-
-    const vegetables = [
-        {id: 1, name: 'Potatoes', calories: 110},
-        {id: 2, name: 'Carrots', calories: 15}
-    ]
-
     return(
-        <>
-            {fruits.length > 0 && <List items = {fruits} category='Fruits'/>}
-            {vegetables.length > 0 && <List items = {vegetables} category='Vegetables'/>}
-
-        </>
-    );
+        <Button/>
+        )
 }
 
 
