@@ -1,4 +1,5 @@
 import {array, string} from "prop-types";
+import style from '../assets/css/List/list.module.css'
 
 function List(props){
 
@@ -22,8 +23,8 @@ function List(props){
 
     return(
         <>
-            <h3>{props.category}</h3>
-            <ol>{listItems}</ol>
+            <h3 className={style.category}>{props.category}</h3>
+            <ol className={style.items}>{listItems}</ol>
         </>
     )
 }
