@@ -1,9 +1,16 @@
 function List(){
-    const fruits = ['apple', 'orange']
+    const fruits = [
+                    {id: 1, name: "apple", calories: 95},
+                    {id: 2, name: 'orange', calories: 9},
+                   ]
 
-    // eslint-disable-next-line react/jsx-key
-    const listItems = fruits.map(fruit => <li>{fruit}</li>);
+    const listItems = fruits.map(
+        fruit =>
+            <li key={fruit.id}>
+                {fruit.name}: &nbsp;
+                <b>{fruit.calories}</b>
+            </li>);
 
-    return (<ul>{listItems}</ul>)
+    return (<ol>{listItems}</ol>)
 }
 export default List
