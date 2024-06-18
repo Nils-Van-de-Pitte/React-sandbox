@@ -1,10 +1,9 @@
-import Button from "./components/Button.jsx";
+import StateComponent from "./logic/StateComponent.jsx";
 
 function App() {
     return(
-        <Button/>
+        <StateComponent/>
         )
 }
-
 
 export default App
