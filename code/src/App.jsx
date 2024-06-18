@@ -3,9 +3,9 @@ import List from "./logic/List.jsx";
 function App() {
 
     const fruits = [
-                    {id: 1, name: 'Apple', calories: 95},
-                    {id: 2, name: 'Orange', calories: 45}
-                   ]
+        {id: 1, name: 'Apple', calories: 95},
+        {id: 2, name: 'Orange', calories: 45}
+    ]
 
     const vegetables = [
         {id: 1, name: 'Potatoes', calories: 110},
@@ -14,8 +14,8 @@ function App() {
 
     return(
         <>
-            <List items = {fruits} category='Fruits'/>
-            <List items = {vegetables} category='Vegetables'/>
+            {fruits.length > 0 && <List items = {fruits} category='Fruits'/>}
+            {vegetables.length > 0 && <List items = {vegetables} category='Vegetables'/>}
 
         </>
     );

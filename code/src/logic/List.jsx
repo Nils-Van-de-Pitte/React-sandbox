@@ -1,4 +1,4 @@
-import {array, string} from "prop-types";
+import PropTypes, {string} from "prop-types";
 import style from '../assets/css/List/list.module.css'
 
 function List(props){
@@ -29,13 +29,17 @@ function List(props){
     )
 }
 
-List.default = {
-    items: null,
+List.defaultProps = {
+    items: [],
     category: 'Unknown'
 }
 
 List.propTypes = {
-    items: array,
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number,
+            name: PropTypes.string,
+            calories: PropTypes.number})),
     category: string
 }
 
