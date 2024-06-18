@@ -11,6 +11,12 @@ function List(){
                 <b>{fruit.calories}</b>
             </li>);
 
+    // Sort Lexicographical (alphabetical)
+    fruits.sort((a, b) => a.name.localeCompare(b.name))
+
+    // Sort Numeric
+    // fruits.sort((a, b) => a.calories - b.calories);
+
     return (<ol>{listItems}</ol>)
 }
 export default List
