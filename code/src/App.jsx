@@ -1,10 +1,9 @@
-import Button from "./components/Button.jsx";
+import Counter from "./components/states/Counter.jsx";
 
 function App() {
     return(
-        <Button/>
+        <Counter/>
         )
 }
-
 
 export default App
