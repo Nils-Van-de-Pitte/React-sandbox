@@ -1,8 +1,8 @@
-import StateComponent from "./logic/StateComponent.jsx";
+import Counter from "./components/states/Counter.jsx";
 
 function App() {
     return(
-        <StateComponent/>
+        <Counter/>
         )
 }
 
