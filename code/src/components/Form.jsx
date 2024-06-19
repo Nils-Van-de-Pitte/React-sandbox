@@ -6,6 +6,7 @@ function Form(){
     const [quantity, setQuantity] = useState();
     const [comment, setComment] = useState("");
     const [payment, setPayment] = useState("Visa");
+    const [shipping, setShipping] = useState("Delivery");
 
     function handleNameChange(event){
         setName(event.target.value);
@@ -21,6 +22,10 @@ function Form(){
 
     function handlePaymentChange(event){
         setPayment(event.target.value);
+    }
+
+    function handleShippingChange(event){
+        setShipping(event.target.value);
     }
 
     return(
@@ -41,8 +46,23 @@ function Form(){
                 <option value="Giftcard">Gift card</option>
             </select>
             <p>Payment: {payment}</p>
-        </div>
-    )
+
+            <label>
+                <input type="radio" value="Pick Up"
+                       checked={shipping === "Pick Up"}
+                       onChange={handleShippingChange}/>
+                PickUp
+            </label>
+            <label>
+                <input type="radio" value="Delivery"
+                       checked={shipping === "Delivery"}
+                       onChange={handleShippingChange}/>
+                Delivery
+        </label>
+        <p>Shipping: {shipping}</p>
+</div>
+
+)
 
 }
 
