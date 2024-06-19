@@ -4,6 +4,8 @@ function Form(){
 
     const [name, setName] = useState("Guest");
     const [quantity, setQuantity] = useState();
+    const [comment, setComment] = useState("");
+    const [payment, setPayment] = useState("Visa");
 
     function handleNameChange(event){
         setName(event.target.value);
@@ -13,6 +15,14 @@ function Form(){
         setQuantity(event.target.value);
     }
 
+    function handleCommentChange(event){
+        setComment(event.target.value);
+    }
+
+    function handlePaymentChange(event){
+        setPayment(event.target.value);
+    }
+
     return(
         <div>
             <input value={name} onChange={handleNameChange}/>
@@ -20,6 +30,17 @@ function Form(){
 
             <input value={quantity} onChange={handleQuantityChange} type="number"/>
             <p>Quantity: {quantity}</p>
+
+            <textarea value={comment} onChange={handleCommentChange} placeholder="Enter delivery instructions"/>
+            <p>Comment: {comment}</p>
+
+            <select value={payment} onChange={handlePaymentChange}>
+                <option value="">Select an option</option>
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="Giftcard">Gift card</option>
+            </select>
+            <p>Payment: {payment}</p>
         </div>
     )
 
