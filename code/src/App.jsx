@@ -1,8 +1,8 @@
-import Counter from "./components/states/Counter.jsx";
+import Form from "./components/Form.jsx";
 
 function App() {
     return(
-        <Counter/>
+        <Form/>
         )
 }
 
